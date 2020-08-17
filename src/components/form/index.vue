@@ -31,7 +31,7 @@
 	import KInput from '@/components/form/KInput.vue'
 	import KFormItem from '@/components/form/KFormItem.vue'
 	import KForm from '@/components/form/KForm.vue'
-	// import Notice from '@/components/Notice.vue'
+	// import Notice from '@/components/Notice.vue' //未封装成插件
 
 	export default {
 		data() {
@@ -52,6 +52,7 @@
 					//KForm组件中需要一个validate方法 valid为形参
 
 					// 自定义弹窗组件，create方法已经在main.js中进行了注册，可以通过this指向的Vue实例中的create进行调用
+					// 已封装
 					const notice = this.$notice({
 						title: '龙慧楷',
 						message: valid ? '叫我小慧' : '小龙儿',
@@ -59,6 +60,15 @@
 					})
 					notice.show()
 
+					// 未封装成插件
+					// const notice = this.$create(Notice,{
+					// 	title: '龙慧楷',
+					// 	message: valid ? '叫我小慧' : '小龙儿',
+					// 	duration: 3000,
+					// })
+					// notice.show()
+
+					// 使用自带弹窗
 					// if (valid) {
 					// 	 alert('submit');
 					// } else {

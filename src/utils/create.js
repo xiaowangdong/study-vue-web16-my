@@ -51,6 +51,7 @@ function create(Component, props) { // create方法最终目标是将组件实�
 export default {
 	install(Vue){
 		// 注册一个Vue原型
+		// 进行进一步封装，变成插件形式，在main.js中Vue.use(create)使用后，直接通过this.$notice就可以直接获取到组件实例.
 		Vue.prototype.$notice = function (options) {
 			return create(Notice,options)
 		}
