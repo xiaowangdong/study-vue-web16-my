@@ -64,7 +64,7 @@ server.get('*', (req, res) => { // 前端来的所有路由请求，在这里处
 
 
 // 监听一个端口
-
-server.listen(3000, () => {
+server.listen(3000, function () {
+	// eslint-disable-next-line no-console
 	console.log('server running!');
-})
+});

@@ -47,6 +47,7 @@ server.get('/', (req, res) => {
 
 // 监听一个端口
 
-server.listen(3000, () => {
+server.listen(3000, function () {
+	// eslint-disable-next-line no-console
 	console.log('server running!');
-})
+});
